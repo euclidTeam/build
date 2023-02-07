@@ -894,7 +894,10 @@ function lunch()
     # Note this is the string "release", not the value of the variable.
     export TARGET_BUILD_TYPE=release
 
+
     check_product $product
+
+    source_vendorsetup
 
     local prebuilt_kernel=$(get_build_var TARGET_PREBUILT_KERNEL)
     if [ -z "$prebuilt_kernel" ]; then
