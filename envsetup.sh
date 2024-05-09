@@ -213,7 +213,7 @@ function check_product()
     if (echo -n $1 | grep -q -e "^euclid_") ; then
         EUCLID_BUILD=$(echo -n $1 | sed -e 's/^euclid_//g')
     else
-        EUCLID_BUILD=
+        EUCLID_BUILD=$TARGET_PRODUCT
     fi
     export EUCLID_BUILD
 
